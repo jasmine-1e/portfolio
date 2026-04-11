@@ -87,14 +87,6 @@ html {
   display: grid;
 }
 
-
-.resume > section {
-  display: grid;
-  width: 100%;
-  clear: both;
-}
-
-
 .resume section {
   display: grid;
   padding: 1em;
