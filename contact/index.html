@@ -12,26 +12,30 @@
     <ul>
         <li><a href="../index.html">Home</a></li>
         <li><a href="../projects/index.html">Projects</a></li>
-        <li><a href="./index.html">Contact</a></li>
+        <li><a href="./index.html" class="current">Contact</a></li>
         <li><a href = "https://github.com/jasmine-1e" target = "_blank">Profile</a></li>
         <li><a href = "../resume/index.html">Resume</a></li>
     </ul>
 </nav>
 
-<h1>Contact </h1>
+<h1>Contact</h1>
 <form action="mailto:jasmine.le369@gmail.com" method="post" enctype="text/plain">
+    <div class="wrapper">
+        
+    <label for="email">Email: <input id="email" name="email"></label>
     
-    <label for="email">Email:</label>
-    <input name="email" type="email">
-    
-    <label for="subject">Subject:</label>
-    <input name="subject">
+    <label for="subject">Subject: <input id="subject" name="subject"></label>
 
-    <label for="body">Body:</label>
-    <textarea name="body"></textarea>
+    <label for="body">Body: <textarea id="body" name="body" ></textarea></label>
+   
 
     <button>Submit</button>
+
+        </div>
+
+ 
 </form>
+
 
 </body>
 </html>
