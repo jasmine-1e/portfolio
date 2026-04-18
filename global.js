@@ -29,7 +29,7 @@ document.body.prepend(nav); //how u add it inside the body, at the beginning
 // to adjust the base URL for all the links accordingly 
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
   ? "/"                  // Local server
-  : "portfolio/";         // GitHub Pages repo name
+  : "/portfolio/";         // GitHub Pages repo name
 
 //location.hostname gives domain of cirrent page 
 //(so local/127.0.0.1 or gihuthub link)
@@ -43,10 +43,8 @@ for (let p of pages) {
 
 
  // counld also do this in one line but idk what it mens 
- // url = !url.startsWith('http') ? BASE_PATH + url : url;
-  if (!url.startsWith('http')) {
-  url = BASE_PATH + url;
-}
+  url = !url.startsWith('http') ? BASE_PATH + url : url;
+
   //nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
   let a = document.createElement('a');
   a.href = url;
