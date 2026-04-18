@@ -1,3 +1,21 @@
+
+
+
+:root{
+    --color-accent: oklch(40.033% 0.16239 261.067);
+    color-scheme: light dark ; 
+  }
+
+html {
+  accent-color: var(--color-accent);
+}
+
+nav {
+  --border-color: oklch(50% 10% 200 / 40%);
+  border-bottom-color: var(--border-color);
+}
+
+
 body {
   /* Set line height to 1.5 times the font size
 	   and use the OS’s UI font as the website font
@@ -15,38 +33,46 @@ body {
     border-bottom: 1px solid oklch(80% 3% 200);
 
     ul, li {
-      display: contents;
-      a {
-        flex: 1;
-        text-decoration: none;
-        color: inherit;
-        text-align: center;
-        padding: 0.5em 0.5em 0.1em 0.5em;        
-        &.current {
-          border-bottom: 0.4em solid oklch(80% 3% 200);
-          padding-bottom: 0.1em;
-        }
-      }
-      a:hover{ 
-        border-bottom: 0.4em solid var(--color-accent);
-        background-color: oklch(from var(--color-accent) 95% 5% h)} 
+      display: contents ; 
     }
+    a {
+      flex: 1;
+      text-decoration: none;
+      color: inherit;
+      text-align: center;
+      padding: 0.5em 0.5em 0.1em 0.5em;  
+
+      &.current {
+        border-bottom: 0.4em solid oklch(77.841% 0.01706 293.548);
+        padding-bottom: 0.1em;
+                }      
+      }
+    a:hover{ 
+      border-bottom: 0.4em solid var(--color-accent);
+      background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+    } 
   }
 }
+
+
+
 
 .wrapper {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 1em;
 }
-label {
+
+ label {
   display: grid;
   grid-template-columns: subgrid;
   grid-column: 1 / -1;
 }
+
 button {
   grid-column: 1 / -1;
 }
+
 .projects {
   display: grid ;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
@@ -75,14 +101,6 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance ;
 }
 
-
-:root{
-    --color-accent: oklch(40.033% 0.16239 261.067);
-  }
-html {
-  accent-color: var(--color-accent);
-}
-
 .resume {
   display: grid;
 }
@@ -92,7 +110,7 @@ html {
   padding: 1em;
   margin: 1.5em 0;
   border-left: 4px solid var(--color-accent);
-  background-color: oklch(from var(--color-accent) 98% 1% h);
+  background-color: oklch(from var(--color-accent) 98% 1% h/ 0.7);
 }
 
 
@@ -107,13 +125,18 @@ html {
   margin: 0.1em;
 }
 
+.resume h3 a:visited {
+  color: oklch(49.2% 0.17128 262.332);
+}
+
+
 .resume h4 {
   color: oklch(30.673% 0.12305 261.966);
   margin: 0.1em; 
 }
 
 .resume p {
-  color: oklch(31.394% 0.12259 262.26);
+  color: oklch(30.673% 0.12305 261.966);
   margin: 0.1em;
 }
 
@@ -121,10 +144,19 @@ html {
 .resume ul {
   margin: 0.5em;
   padding-left: 1.5em;
-  color: oklch(21.144% 0.07435 261.291);
+  color: oklch(30.673% 0.12305 261.966);
 }
 
 .resume li {
   margin: 0; 
 }
 
+label.color-scheme {
+  position: absolute ;  
+  top : 0.5rem ; 
+  right : 1rem ; 
+  font-size: 80%;
+  display: flex;
+  gap: 0.5em;
+  ;
+}
