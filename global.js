@@ -9,11 +9,11 @@ function $$(selector, context = document) {
 // );
 let pages = [
   { url: '', title: 'Home' },
-  { url: 'projects/', title: 'Projects' },
+  { url: 'projects/index.html', title: 'Projects' },
   // add the rest of your pages here
-  { url: 'contact/', title: 'Contact' },
+  { url: 'contact/index.html', title: 'Contact' },
   { url: 'https://github.com/jasmine-1e', title: 'Profile' },
-  { url: 'resume/', title: 'Resume' }
+  { url: 'resume/index.html', title: 'Resume' }
 ];
 
 // if (currentLink) {
@@ -29,7 +29,7 @@ document.body.prepend(nav); //how u add it inside the body, at the beginning
 // to adjust the base URL for all the links accordingly 
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
   ? "/"                  // Local server
-  : "/website/";         // GitHub Pages repo name
+  : "/portfolio/";         // GitHub Pages repo name
 
 //location.hostname gives domain of cirrent page 
 //(so local/127.0.0.1 or gihuthub link)
