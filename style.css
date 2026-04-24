@@ -160,3 +160,53 @@ label.color-scheme {
   gap: 0.5em;
   ;
 }
+
+
+#profile-stats {
+  background-color: oklch(from var(--color-accent) 70% 1% h/ 0.1);
+  padding: 3px;
+  border-radius: 20px;
+}
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
+
+#profile-stats dt {
+  grid-row: 1;
+  /* font-weight: bold; */
+}
+
+#profile-stats dd {
+  grid-row: 2;
+  margin: 0.5em 0;
+  font-weight: bold; 
+  font-size: 30px ; 
+}
+
+.section-title { 
+  padding: 10px;
+  margin-bottom: 4px;
+  margin-top: 20px;
+  /* background-color: oklch(from var(--color-accent) 98% 1% h/ 0.1); */
+  /* border-radius: 10px; */
+}
+
+.projects {
+  grid-template-columns: repeat(3, minmax(15em, 1fr));
+    justify-content: center ; 
+}
+.projects article {
+  text-align: center;
+}
+.projects article img {
+  margin: 0 auto; /* This centers the image inside the article */
+}
+
+body > img {
+  padding: 20px; 
+  display: block;
+  margin-inline: auto;
+}
