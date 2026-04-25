@@ -27,7 +27,7 @@ document.body.prepend(nav); //how u add it inside the body, at the beginning
 
 /// to see if we r on home page w/ localhost or on github, 
 // to adjust the base URL for all the links accordingly 
-const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+export const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
   ? "/"                  // Local server
   : "/portfolio/";         // GitHub Pages repo name
 
