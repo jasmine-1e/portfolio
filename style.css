@@ -196,17 +196,127 @@ label.color-scheme {
 
 .projects {
   grid-template-columns: repeat(3, minmax(15em, 1fr));
-    justify-content: center ; 
+  justify-content: center ; 
 }
-.projects article {
-  text-align: center;
+
+
+
+
+.projects article  {
+  margin: 1em ; /* This centers the image inside the article */
+  text-align: center
+
 }
-.projects article img {
-  margin: 0 auto; /* This centers the image inside the article */
+
+.projects h2  {
+  text-align: center ; 
+  align-content: center;
 }
 
 body > img {
   padding: 20px; 
   display: block;
   margin-inline: auto;
+}
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 1; 
+  gap: 2em;
+  margin: 20px auto;
+  justify-content: center;
+  max-width: 70%; 
+}
+
+/* Ensure the chart-box inside stays flexible */
+.chart-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+  width: 100%;  
+}
+
+.chart-box {
+  display: flex;          /* Keeps chart and legend side-by-side */
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  width: 100%;
+}
+
+ul.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  list-style: none;
+  margin: 20px auto;
+  gap: 12px;
+  padding: 5px ; 
+  background-color: oklch(from var(--color-accent) 70% 1% h/ 0.1);   
+  border: 1px solid #ccc; 
+  border-radius: 12px;
+  justify-content: center ;
+  width: fit-content;
+  max-width: 70%;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+ul.legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  font-family: sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  justify-content: flex-start; 
+}
+
+ul.legend:has(li){
+   padding: 5px ; 
+  background-color: oklch(from var(--color-accent) 70% 1% h/ 0.1);   
+  border: 1px solid #ccc; 
+  border-radius: 12px;}
+
+.swatch{
+  display: block; 
+  aspect-ratio: 1 / 1 ; 
+  background-color: var(--color) ;
+  width : 2em ; 
+  border-radius: 20%;
+}
+
+.searchBar {  
+  display: block; 
+  margin: 0 auto 2em;  
+  padding: 0.5em;
+  border: 1px solid oklch(80% 3% 200);
+  border-radius: 10px;
+  width: 100%;
+}
+path {
+  transition: 300ms;
+  cursor: pointer;
+}
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+.selected {
+  --color: oklch(55.554% 0.19509 2.546) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
 }
